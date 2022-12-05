@@ -1,7 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
+import {useEffect} from "react";
 
-function App() {
+const App = () => {
+
+  useEffect(() => {
+    fetch('https://about-me.ando-lalaina.ml/')
+      .then(res => res.json())
+      .then(data => console.log(data))
+  }, []);
+
+  return <div>Hello world</div>
+}
+
+/*function App() {
   return (
     <div className="App">
       <header className="App-header">
@@ -20,6 +31,6 @@ function App() {
       </header>
     </div>
   );
-}
+}*/
 
 export default App;
